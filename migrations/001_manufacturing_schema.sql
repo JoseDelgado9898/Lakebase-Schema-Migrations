@@ -74,10 +74,3 @@ CREATE TABLE IF NOT EXISTS work_orders (
     completed_at TIMESTAMP
 );
 
--- Hot-path indexes: time-series reads per sensor, open alerts, equipment lookups
-CREATE INDEX IF NOT EXISTS ix_telemetry_readings_sensor_time
-    ON telemetry_readings (sensor_id, reading_time DESC);
-CREATE INDEX IF NOT EXISTS ix_alerts_sensor_time
-    ON alerts (sensor_id, alert_time DESC);
-CREATE INDEX IF NOT EXISTS ix_work_orders_equipment
-    ON work_orders (equipment_id);
