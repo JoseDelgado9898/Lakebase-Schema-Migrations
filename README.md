@@ -11,7 +11,7 @@ closing the PR deletes the branch.
 Schema changes never touch production directly, and reviewers see a real
 execution result (plus an AI risk assessment) before they approve.
 
-## Features
+## Features 
 
 | Area | What you get |
 |------|--------------|
